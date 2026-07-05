@@ -63,6 +63,7 @@ public class Sørenskriptt : MonoBehaviour
 
         if (shoot.IsPressed())
         {
+            GameObject.Find("balle1").GetComponent<Animator>().SetBool("istwerking", true);
             print("shot!");
             print(_shootCd);
             if (_shootCd <= 0)
@@ -80,6 +81,10 @@ public class Sørenskriptt : MonoBehaviour
                 bullet3.GetComponent<Rigidbody>().AddRelativeForce(bullet3.transform.forward * BulletZoom, ForceMode.Force);
                 bullet3.GetComponent<bulletBehaviour>().bulletLifeTimeAmount = BulletLifeTime;
             }
+        }
+        else
+        {
+            GameObject.Find("balle1").GetComponent<Animator>().SetBool("istwerking", false);
         }
     }
 }

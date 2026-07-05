@@ -293,13 +293,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.18228586, y: 0.029346598, z: -0.037213236, w: 0.9821028}
-  m_LocalPosition: {x: -3.63, y: 2.02, z: -2.42}
+  m_LocalRotation: {x: -0.087987304, y: 0.038257506, z: -0.02797161, w: 0.99499357}
+  m_LocalPosition: {x: -1.3100002, y: -0.28, z: -2.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 21.114, y: 2.708, z: -3.835}
+  m_Father: {fileID: 392474074}
+  m_LocalEulerAnglesHint: {x: -9.96, y: 4.72, z: -3.632}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,7 +356,6 @@ GameObject:
   - component: {fileID: 392474073}
   - component: {fileID: 392474072}
   - component: {fileID: 392474071}
-  - component: {fileID: 392474070}
   - component: {fileID: 392474075}
   - component: {fileID: 392474076}
   m_Layer: 0
@@ -366,20 +365,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &392474070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 392474069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05a88309fcbf96948b8b6385f6b767d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  "peanutButterJellyTimeSp\xF8rgsm\xE5lsTegn": 1
-  myMaterialyay: {fileID: 0}
 --- !u!136 &392474071
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -473,6 +458,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 330585546}
   - {fileID: 1907978265}
   - {fileID: 20576610}
   - {fileID: 947159422}
@@ -520,7 +506,7 @@ MonoBehaviour:
   Object: Moneys
   "_S\xF8rensDejligeObjekt": {fileID: 0}
   _speed: 10
-  _shootCdAmount: 2
+  _shootCdAmount: 0.3
   move:
     m_Name: Move
     m_Type: 0
@@ -1439,7 +1425,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: ad8e5b95b7baa4e49964b46324d68c66, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1551,7 +1537,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: ad8e5b95b7baa4e49964b46324d68c66, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1597,7 +1583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748170482752793195, guid: cc6aaeb245b0f054ebc110d73fc4977e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5300008
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3748170482752793195, guid: cc6aaeb245b0f054ebc110d73fc4977e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1652,6 +1638,7 @@ GameObject:
   - component: {fileID: 1090781164}
   - component: {fileID: 1090781163}
   - component: {fileID: 1090781162}
+  - component: {fileID: 1090781166}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -1753,6 +1740,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1090781166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090781161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 28931130e4129c748a4830090d1e46ca, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1001 &1136673261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1767,7 +1786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748170482752793195, guid: cc6aaeb245b0f054ebc110d73fc4977e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5300003
+      value: 0.29
       objectReference: {fileID: 0}
     - target: {fileID: 3748170482752793195, guid: cc6aaeb245b0f054ebc110d73fc4977e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1824,7 +1843,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748170482752793195, guid: cc6aaeb245b0f054ebc110d73fc4977e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5299997
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 3748170482752793195, guid: cc6aaeb245b0f054ebc110d73fc4977e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2099,7 +2118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748170482752793195, guid: cc6aaeb245b0f054ebc110d73fc4977e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5299989
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3748170482752793195, guid: cc6aaeb245b0f054ebc110d73fc4977e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2464,7 +2483,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 3720540258257103595}
