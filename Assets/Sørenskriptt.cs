@@ -75,6 +75,10 @@ public class Sørenskriptt : MonoBehaviour
                 GameObject bullet2 = Instantiate(Bullet, ShootPoint.transform.position, Quaternion.Euler(0, -20, 0));
                 bullet2.GetComponent<Rigidbody>().AddRelativeForce(bullet2.transform.forward * BulletZoom, ForceMode.Force);
                 bullet2.GetComponent<bulletBehaviour>().bulletLifeTimeAmount = BulletLifeTime;
+                
+                GameObject bullet3 = Instantiate(Bullet, ShootPoint.transform.position, Quaternion.Euler(0, 20, 0));
+                bullet3.GetComponent<Rigidbody>().AddRelativeForce(bullet3.transform.forward * BulletZoom, ForceMode.Force);
+                bullet3.GetComponent<bulletBehaviour>().bulletLifeTimeAmount = BulletLifeTime;
             }
         }
     }

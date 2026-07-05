@@ -1,18 +1,18 @@
+using System;
 using UnityEngine;
+using Random = System.Random;
 
 public class evilsørenskrippp : MonoBehaviour
 {
     public bool peanutButterJellyTimeSpørgsmålsTegn;
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        print("Jeg er ond og hader dig");
-    }
+    [SerializeField] Material myMaterialyay;
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Bullet"))
+        {
+        myMaterialyay.color = new Color(UnityEngine.Random.Range(0, 255), UnityEngine.Random.Range(0, 255), UnityEngine.Random.Range(0, 255));
+        Destroy(this.gameObject);
+        }
     }
 }
